@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>Arquetipo de Persona — Scala, Módulo 3 NBL</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
     --bg:#f4f5f6;
@@ -13,192 +13,212 @@
     --muted:#5b6470;
     --accent:#1f8a82;
     --accent-soft:#e3f3f1;
+    --accent2:#c8871a;
+    --accent2-soft:#faf1e0;
     --border:#e2e5e8;
+    --trait-bg:#f7e6a8;
   }
   *{box-sizing:border-box;}
-  body{
-    margin:0;
-    background:var(--bg);
-    font-family:'Inter',sans-serif;
-    color:var(--ink);
-    padding:32px;
-  }
-  .sheet{
-    max-width:1400px;
-    margin:0 auto;
-    background:var(--card);
-    border-radius:16px;
-    border:1px solid var(--border);
-    padding:40px 48px;
-  }
-  .eyebrow{
-    font-size:11px;
-    letter-spacing:.14em;
-    text-transform:uppercase;
-    color:var(--accent);
-    font-weight:600;
-    margin-bottom:6px;
-  }
-  h1{
-    font-family:'Source Serif 4',serif;
-    font-size:30px;
-    margin:0 0 4px;
-    font-weight:700;
-  }
-  .subtitle{
-    color:var(--muted);
-    font-size:14px;
-    margin-bottom:28px;
-  }
-  .layout{
-    display:flex;
-    gap:40px;
-    align-items:flex-start;
-  }
-  .sidebar{
-    flex:0 0 300px;
-  }
+  body{margin:0;background:var(--bg);font-family:'Inter',sans-serif;color:var(--ink);padding:32px;}
+  .sheet{max-width:1500px;margin:0 auto;background:var(--card);border-radius:16px;border:1px solid var(--border);padding:40px 48px;}
+  .eyebrow{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:6px;}
+  h1{font-family:'Source Serif 4',serif;font-size:28px;margin:0 0 4px;font-weight:700;}
+  .subtitle{color:var(--muted);font-size:13.5px;margin-bottom:28px;}
+
+  .personas{display:grid;grid-template-columns:1fr 1fr;gap:36px;}
+  .persona{border:1px solid var(--border);border-radius:16px;padding:26px;background:#fdfdfd;}
+  .persona.wearable{--accent:var(--accent2);--accent-soft:var(--accent2-soft);}
+
+  .p-head{display:flex;gap:16px;align-items:center;margin-bottom:18px;}
   .avatar{
-    width:220px;
-    height:220px;
-    border-radius:50%;
-    background:var(--accent-soft);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    margin:0 auto 20px;
+    width:64px;height:64px;border-radius:50%;flex:none;
+    background:var(--accent-soft);display:flex;align-items:center;justify-content:center;
   }
-  .avatar svg{width:110px;height:110px;color:var(--accent);}
-  .info-title{
-    font-size:12px;
-    text-transform:uppercase;
-    letter-spacing:.1em;
-    color:var(--muted);
-    font-weight:600;
-    margin-bottom:12px;
-    text-align:center;
+  .avatar svg{width:32px;height:32px;color:var(--accent);}
+  .p-name{font-family:'Source Serif 4',serif;font-size:20px;font-weight:700;margin:0;}
+  .p-tag{font-size:12px;color:var(--muted);margin-top:2px;}
+
+  .chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:18px;}
+  .chip{
+    font-size:11px;font-weight:600;padding:5px 10px;border-radius:999px;
+    background:var(--accent-soft);color:var(--accent);
   }
-  .info-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:16px 14px;
-  }
-  .info-item{
-    background:#fafbfb;
-    border:1px solid var(--border);
-    border-radius:10px;
-    padding:10px 12px;
-  }
-  .info-item .label{
-    font-size:10.5px;
-    text-transform:uppercase;
-    letter-spacing:.06em;
-    color:var(--muted);
-    font-weight:600;
-  }
-  .info-item .value{
-    font-size:12.5px;
-    margin-top:3px;
-    line-height:1.4;
-  }
-  .columns{
-    flex:1;
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:0 40px;
-  }
-  section.block{
-    margin-bottom:26px;
-  }
+
+  section.block{margin-bottom:16px;}
   section.block h2{
-    font-family:'Source Serif 4',serif;
-    font-size:16px;
-    font-weight:600;
-    margin:0 0 4px;
-    padding-bottom:8px;
-    border-bottom:2px solid var(--accent);
-    display:inline-block;
+    font-size:12.5px;text-transform:uppercase;letter-spacing:.06em;font-weight:700;
+    margin:0 0 6px;padding-bottom:5px;border-bottom:2px solid var(--accent);display:inline-block;
   }
-  section.block p{
-    font-size:13.5px;
-    line-height:1.6;
-    color:#33383e;
-    margin:10px 0 0;
+  section.block ul{margin:8px 0 0;padding-left:16px;font-size:12.5px;line-height:1.55;color:#33383e;}
+  section.block ul li{margin-bottom:3px;}
+
+  /* Personalidad slider card */
+  .trait-card{
+    background:var(--trait-bg);
+    border-radius:14px;
+    padding:20px 22px;
+    margin-top:20px;
   }
-  .footnote{
-    margin-top:24px;
-    padding-top:16px;
-    border-top:1px solid var(--border);
-    font-size:11px;
-    color:var(--muted);
+  .trait-card h2{
+    font-size:16px;font-weight:700;margin:0 0 16px;color:var(--ink);
+    border:none;padding:0;
   }
-  @media print{
-    body{padding:0;background:#fff;}
-    .sheet{border:none;border-radius:0;}
+  .trait-row{margin-bottom:16px;}
+  .trait-row:last-child{margin-bottom:0;}
+  .trait-labels{
+    display:flex;justify-content:space-between;
+    font-size:11.5px;font-weight:700;margin-bottom:6px;
   }
-  @media (max-width:960px){
-    .layout{flex-direction:column;}
-    .sidebar{flex:none;width:100%;}
-    .columns{grid-template-columns:1fr;}
+  .trait-track{
+    position:relative;
+    height:1px;
+    background:var(--ink);
   }
+  .trait-pill{
+    position:absolute;
+    top:50%;
+    width:36px;height:16px;
+    background:var(--ink);
+    border-radius:999px;
+    transform:translate(-50%,-50%);
+  }
+
+  .footnote{margin-top:26px;padding-top:16px;border-top:1px solid var(--border);font-size:11px;color:var(--muted);}
+  @media print{ body{padding:0;background:#fff;} .sheet{border:none;border-radius:0;} }
+  @media (max-width:960px){ .personas{grid-template-columns:1fr;} }
 </style>
 </head>
 <body>
   <div class="sheet">
     <div class="eyebrow">Scala · NBL Módulo 3 — El Cliente</div>
-    <h1>Arquetipo de Persona — v2 (post-campo)</h1>
-    <div class="subtitle">Segmento: atleta amateur comprometido (B2C) · Síntesis de 13 entrevistas + encuesta (n=60). Reemplaza la v1 intuitiva.</div>
+    <h1>Arquetipo de Persona — v3 (final, post-campo)</h1>
+    <div class="subtitle">Dos arquetipos oficiales, construidos sobre las hipótesis validadas con las 13 entrevistas y la encuesta (n=60): el patrón mayoritario sin wearable (H5, validada fuerte) y el sub-caso con datos sin accionar (H1, matizada).</div>
 
-    <div class="layout">
-      <div class="sidebar">
-        <div class="avatar">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <circle cx="12" cy="8" r="4"/>
-            <path d="M4 20c0-4.4 3.6-7 8-7s8 2.6 8 7"/>
-          </svg>
+    <div class="personas">
+
+      <!-- PERSONA SIN WEARABLE -->
+      <div class="persona">
+        <div class="p-head">
+          <div class="avatar">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>
+          </div>
+          <div>
+            <p class="p-name">Flor, 28 años</p>
+            <div class="p-tag">Sin wearable · gimnasio/fuerza, delega a clase o entrenadora</div>
+          </div>
         </div>
-        <div class="info-title">Información del arquetipo</div>
-        <div class="info-grid">
-          <div class="info-item"><div class="label">Edad</div><div class="value">25–55 años</div></div>
-          <div class="info-item"><div class="label">Nivel</div><div class="value">Amateur comprometido, 3+ veces/sem.</div></div>
-          <div class="info-item"><div class="label">Deportes</div><div class="value">Running, gimnasio, pilates, tenis, natación, fútbol, golf</div></div>
-          <div class="info-item"><div class="label">Wearable</div><div class="value">Opcional — 65% no usa (9/13 entrevistados)</div></div>
+        <div class="chips">
+          <span class="chip">65% del segmento</span>
+          <span class="chip">Delega estructura</span>
+          <span class="chip">Decide por sensación</span>
+        </div>
+
+        <section class="block">
+          <h2>Jobs</h2>
+          <ul>
+            <li>Entrenar sin tener que armar el plan ella misma.</li>
+            <li>Comer &ldquo;bien&rdquo; sin perderse en info contradictoria de redes.</li>
+            <li>Sostener la constancia pese a la falta de ganas.</li>
+          </ul>
+        </section>
+        <section class="block">
+          <h2>Pains</h2>
+          <ul>
+            <li>No tiene guía propia, solo la de la clase puntual.</li>
+            <li>Duda seguido si está progresando.</li>
+            <li>Nutrición es su punto más débil.</li>
+          </ul>
+        </section>
+        <section class="block">
+          <h2>Gains</h2>
+          <ul>
+            <li>Que le digan qué hacer hoy, simple y sin tecnicismos.</li>
+            <li>Mantener el vínculo humano/social que ya valora.</li>
+          </ul>
+        </section>
+        <section class="block">
+          <h2>Drivers / Inhibidores</h2>
+          <ul>
+            <li>Ya paga por estructura (clase, entrenadora) — presupuesto ya asignado.</li>
+            <li>Paga recién después de ver valor, no de entrada.</li>
+          </ul>
+        </section>
+
+        <div class="trait-card">
+          <h2>Personalidad</h2>
+          <div class="trait-row"><div class="trait-labels"><span>Autogestión</span><span>Delega</span></div><div class="trait-track"><div class="trait-pill" style="left:80%"></div></div></div>
+          <div class="trait-row"><div class="trait-labels"><span>Intuición</span><span>Datos</span></div><div class="trait-track"><div class="trait-pill" style="left:15%"></div></div></div>
+          <div class="trait-row"><div class="trait-labels"><span>Individual</span><span>Social</span></div><div class="trait-track"><div class="trait-pill" style="left:70%"></div></div></div>
+          <div class="trait-row"><div class="trait-labels"><span>Cauteloso</span><span>Arriesgado</span></div><div class="trait-track"><div class="trait-pill" style="left:60%"></div></div></div>
+          <div class="trait-row"><div class="trait-labels"><span>Escéptico IA</span><span>Confía en IA</span></div><div class="trait-track"><div class="trait-pill" style="left:30%"></div></div></div>
+          <div class="trait-row"><div class="trait-labels"><span>Simplicidad</span><span>Control de detalle</span></div><div class="trait-track"><div class="trait-pill" style="left:20%"></div></div></div>
+          <div class="trait-row"><div class="trait-labels"><span>Paga rápido</span><span>Paga tras probar</span></div><div class="trait-track"><div class="trait-pill" style="left:85%"></div></div></div>
         </div>
       </div>
 
-      <div class="columns">
-        <div>
-          <section class="block">
-            <h2>Sobre el arquetipo</h2>
-            <p>Atleta amateur comprometido/a, perfil compuesto de 13 entrevistas reales (no un individuo único: la variedad de edad, deporte y género fue deliberada — 6 mujeres, 7 varones). Constancia inestable ("nunca tengo ganas pero voy"), autoexigencia alta y duda recurrente sobre si "lo está haciendo bien" (50% de la encuesta). Prioriza simplicidad: delega la estructura antes que planificarla.</p>
-          </section>
-          <section class="block">
-            <h2>Jobs — qué hace hoy</h2>
-            <p>Decide entrenar fuerte, suave o descansar según sensación del día (60% de la encuesta). Delega la estructura semanal a un entrenador o clase grupal, o se autogestiona leyendo/mirando redes. Improvisa la nutrición o sigue reglas sueltas de TikTok. Si tiene wearable, mira sueño y frecuencia cardíaca pero rara vez cruza esos datos entre sí.</p>
-          </section>
-          <section class="block">
-            <h2>Drivers — qué lo moviliza</h2>
-            <p>Ya paga o pagó por estructura (entrenador, clase, nutricionista). Tiene un objetivo concreto activo (carrera, evento, salud). El 73% ve natural gestionar todo conversando por chat o voz. Los usuarios más avanzados en datos quieren que la IA integre su información automáticamente en vez de cruzarla a mano.</p>
-          </section>
+      <!-- PERSONA CON WEARABLE -->
+      <div class="persona wearable">
+        <div class="p-head">
+          <div class="avatar">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>
+          </div>
+          <div>
+            <p class="p-name">Nico, 30 años</p>
+            <div class="p-tag">Con wearable (Garmin) · running/trail, entrena solo</div>
+          </div>
         </div>
-        <div>
-          <section class="block">
-            <h2>Pains — frustraciones</h2>
-            <p>Falta de guía personalizada y accionable — el dolor dominante (reframe avalado por el mentor), no el exceso de datos. Duda recurrente sobre si lo hace bien. La nutrición es el punto más débil: qué comer, cómo planificar el súper. Fricción de integrar datos de wearable a mano. Desconfianza de una app genérica que no contemple su contexto real.</p>
-          </section>
-          <section class="block">
-            <h2>Gains — qué espera obtener</h2>
-            <p>Que le digan, cada día, exactamente qué hacer, ajustado a cómo viene su semana y su cuerpo. Simplicidad radical, sin tecnicismos ni sobrecarga de opciones. Mantener el vínculo humano donde ya lo valora — la IA como capa de organización, no reemplazo. Progreso visible hacia el objetivo, sin lesionarse.</p>
-          </section>
-          <section class="block">
-            <h2>Inhibidores — qué lo frena</h2>
-            <p>Fatiga de IA y desconfianza de que "lo conozca de verdad". Falta de aval profesional o médico — rechaza el estilo influencer sin sustento. Para parte del segmento, el vínculo humano es insustituible (el gimnasio como desconexión social). Paga solo después de ver valor: 72% dice sí o "tal vez", pero 63% gasta US$0 hoy.</p>
-          </section>
+        <div class="chips">
+          <span class="chip">Sub-caso con dispositivo</span>
+          <span class="chip">Datos sin accionar</span>
+          <span class="chip">Sin plan ni entrenador</span>
+        </div>
+
+        <section class="block">
+          <h2>Jobs</h2>
+          <ul>
+            <li>Decidir cada día si entrenar fuerte o suave, según el reloj y el cuerpo.</li>
+            <li>Sostener un objetivo (carrera) sin lesionarse.</li>
+            <li>Entender si el plan/nutrición está funcionando.</li>
+          </ul>
+        </section>
+        <section class="block">
+          <h2>Pains</h2>
+          <ul>
+            <li>Tiene los datos (sueño, HR, estrés) pero no sabe qué hacer con ellos.</li>
+            <li>No cruza variables entre sí para decidir.</li>
+            <li>Ninguna app le arma el plan, solo muestra números sueltos.</li>
+          </ul>
+        </section>
+        <section class="block">
+          <h2>Gains</h2>
+          <ul>
+            <li>Que el reloj se convierta en una decisión, no solo un registro.</li>
+            <li>Un plan que se ajuste automáticamente a esos datos.</li>
+          </ul>
+        </section>
+        <section class="block">
+          <h2>Drivers / Inhibidores</h2>
+          <ul>
+            <li>Ya invirtió en el wearable — costo hundido que predispone a aprovecharlo mejor.</li>
+            <li>Si la app solo repite lo que el reloj ya muestra, pierde el interés rápido.</li>
+          </ul>
+        </section>
+
+        <div class="trait-card">
+          <h2>Personalidad</h2>
+          <div class="trait-row"><div class="trait-labels"><span>Autogestión</span><span>Delega</span></div><div class="trait-track"><div class="trait-pill" style="left:20%"></div></div></div>
+          <div class="trait-row"><div class="trait-labels"><span>Intuición</span><span>Datos</span></div><div class="trait-track"><div class="trait-pill" style="left:75%"></div></div></div>
+          <div class="trait-row"><div class="trait-labels"><span>Individual</span><span>Social</span></div><div class="trait-track"><div class="trait-pill" style="left:30%"></div></div></div>
+          <div class="trait-row"><div class="trait-labels"><span>Cauteloso</span><span>Arriesgado</span></div><div class="trait-track"><div class="trait-pill" style="left:55%"></div></div></div>
+          <div class="trait-row"><div class="trait-labels"><span>Escéptico IA</span><span>Confía en IA</span></div><div class="trait-track"><div class="trait-pill" style="left:65%"></div></div></div>
+          <div class="trait-row"><div class="trait-labels"><span>Simplicidad</span><span>Control de detalle</span></div><div class="trait-track"><div class="trait-pill" style="left:75%"></div></div></div>
+          <div class="trait-row"><div class="trait-labels"><span>Paga rápido</span><span>Paga tras probar</span></div><div class="trait-track"><div class="trait-pill" style="left:70%"></div></div></div>
         </div>
       </div>
+
     </div>
 
-    <div class="footnote">Fuente: síntesis propia sobre 13 entrevistas (Notion · Módulo 3) y encuesta "Cómo entrenás y tomás tus decisiones" (n=60). Ver detalle en <em>Modulo-3-Resultados-provisorios-entrevistas-y-encuesta.md</em>.</div>
+    <div class="footnote">Fuente: síntesis propia sobre 13 entrevistas (Notion · Módulo 3) y encuesta "Cómo entrenás y tomás tus decisiones" (n=60). Los sliders de personalidad son estimaciones cualitativas de la dupla en base a los patrones de campo, no una medición directa de la encuesta.</div>
   </div>
 </body>
 </html>
