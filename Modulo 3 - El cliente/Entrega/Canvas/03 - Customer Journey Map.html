@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>Customer Journey Map — Scala, Módulo 3 NBL</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
     --bg:#f4f5f6;
@@ -13,116 +13,201 @@
     --muted:#5b6470;
     --border:#e2e5e8;
     --accent:#1f8a82;
-    --pain:#c04b4b;
-    --opp:#1f8a6e;
+    --green:#dcecd6;
+    --yellow:#f7ecd3;
+    --red:#f6dcd9;
+    --dot-green:#4a9c5c;
+    --dot-yellow:#d9a13b;
+    --dot-red:#c24a41;
   }
   *{box-sizing:border-box;}
   body{margin:0;background:var(--bg);font-family:'Inter',sans-serif;color:var(--ink);padding:32px;}
-  .sheet{max-width:1500px;margin:0 auto;background:var(--card);border-radius:16px;border:1px solid var(--border);padding:40px 48px;}
+  .sheet{max-width:1600px;margin:0 auto;background:var(--card);border-radius:16px;border:1px solid var(--border);padding:40px 48px;}
   .eyebrow{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:6px;}
-  h1{font-family:'Source Serif 4',serif;font-size:30px;margin:0 0 4px;font-weight:700;}
-  .subtitle{color:var(--muted);font-size:14px;margin-bottom:28px;}
+  h1{font-family:'Source Serif 4',serif;font-size:28px;margin:0 0 4px;font-weight:700;}
+  .subtitle{color:var(--muted);font-size:13.5px;margin-bottom:26px;max-width:1000px;}
 
   .journey{
     display:grid;
-    grid-template-columns:150px repeat(6, 1fr);
-    gap:10px;
+    grid-template-columns:140px 1fr;
   }
-  .row-label, .stage-header, .cell{
-    border-radius:10px;
-    padding:14px 14px;
-    font-size:12.5px;
-    line-height:1.5;
-  }
-  .row-label{
-    background:transparent;
+  .icons-col{
     display:flex;
+    flex-direction:column;
+  }
+  .icons-col .spacer{height:66px;}
+  .icons-col .icon-row{
+    display:flex;
+    flex-direction:column;
     align-items:center;
-    font-size:11.5px;
+    justify-content:center;
+    gap:6px;
+    text-align:center;
+    font-size:10px;
+    font-weight:700;
+    letter-spacing:.04em;
     text-transform:uppercase;
-    letter-spacing:.06em;
-    font-weight:600;
     color:var(--muted);
   }
-  .stage-header{
-    background:var(--ink);
-    color:#fff;
-    font-weight:600;
+  .icon-row .icon{
+    width:40px;height:40px;border-radius:10px;
+    display:flex;align-items:center;justify-content:center;
+    font-size:20px;
+  }
+  .icon-needs .icon{background:#e4e6e8;}
+  .icon-band{height:126.67px;}
+  .icon-band .icon{border-radius:50%;background:#fff;border:2px solid currentColor;}
+  .icon-green{color:var(--dot-green);}
+  .icon-yellow{color:var(--dot-yellow);}
+  .icon-red{color:var(--dot-red);}
+  .icon-voice .icon{background:#e4e6e8;font-size:18px;}
+
+  .phases{
+    display:grid;
+    grid-template-columns:repeat(6, 1fr);
+    column-gap:0;
+  }
+  .phase-head{
+    padding:0 14px 16px;
+    border-left:1px solid var(--border);
     text-align:center;
-    font-size:12.5px;
   }
-  .stage-header .n{
-    display:block;
-    font-size:10.5px;
-    opacity:.65;
-    margin-bottom:2px;
-    font-weight:500;
+  .phase-head:first-child{border-left:none;}
+  .phase-head .n{
+    font-size:11px;font-weight:700;letter-spacing:.08em;color:var(--muted);text-transform:uppercase;
   }
-  .cell{
-    background:#fafbfb;
-    border:1px solid var(--border);
+  .phase-head .t{font-size:13px;font-weight:600;margin:4px 0 6px;}
+  .phase-head .d{font-size:11.5px;color:#4a5058;line-height:1.4;}
+
+  .curve-wrap{grid-column:1 / -1;position:relative;}
+  .curve-wrap svg{display:block;width:100%;height:auto;}
+
+  .quotes{
+    display:grid;
+    grid-template-columns:repeat(6, 1fr);
+  }
+  .quote{
+    padding:16px 14px 0;
+    border-left:1px solid var(--border);
+    font-size:11.5px;
+    line-height:1.5;
     color:#33383e;
   }
-  .cell.pain{border-left:3px solid var(--pain);}
-  .cell.opp{border-left:3px solid var(--opp); background:#f2f9f6;}
-
-  .footnote{margin-top:24px;padding-top:16px;border-top:1px solid var(--border);font-size:11px;color:var(--muted);}
-  @media print{ body{padding:0;background:#fff;} .sheet{border:none;border-radius:0;} }
-  @media (max-width:1100px){
-    .journey{grid-template-columns:1fr; }
-    .row-label{margin-top:14px;}
+  .quote:first-child{border-left:none;}
+  .quote .label{
+    display:block;font-size:9.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--dot-red);margin-bottom:4px;
   }
+
+  .footnote{margin-top:26px;padding-top:16px;border-top:1px solid var(--border);font-size:11px;color:var(--muted);}
+  @media print{ body{padding:0;background:#fff;} .sheet{border:none;border-radius:0;} }
 </style>
 </head>
 <body>
   <div class="sheet">
     <div class="eyebrow">Scala · NBL Módulo 3 — El Cliente</div>
-    <h1>Customer Journey Map — v2 (post-campo)</h1>
-    <div class="subtitle">Recorrido del atleta con el problema (no con Scala) — dónde duele más y dónde está la oportunidad.</div>
+    <h1>Customer Journey Map — recorrido con el problema</h1>
+    <div class="subtitle">No es el recorrido con Scala — es cómo vive el atleta el problema hoy, sin producto. La curva emocional cae a medida que avanza: motivación inicial que se erosiona por falta de guía, hasta la meseta o el abandono. Ahí está la oportunidad.</div>
 
     <div class="journey">
-      <div class="row-label"></div>
-      <div class="stage-header"><span class="n">1</span>Se fija un objetivo</div>
-      <div class="stage-header"><span class="n">2</span>Busca estructura</div>
-      <div class="stage-header"><span class="n">3</span>Entrena día a día</div>
-      <div class="stage-header"><span class="n">4</span>Come / se recupera</div>
-      <div class="stage-header"><span class="n">5</span>Mide progreso</div>
-      <div class="stage-header"><span class="n">6</span>Meseta o abandono</div>
+      <div class="icons-col">
+        <div class="spacer"></div>
+        <div class="icon-row icon-needs"><div class="icon">💬</div>Necesidad /<br>expectativa</div>
+      </div>
+      <div class="phases">
+        <div class="phase-head"><div class="n">Etapa 1</div><div class="t">Se fija un objetivo</div><div class="d">Necesita saber por dónde arrancar sin sentirse abrumado/a.</div></div>
+        <div class="phase-head"><div class="n">Etapa 2</div><div class="t">Busca estructura</div><div class="d">Necesita una guía en la que confiar, accesible en costo y tiempo.</div></div>
+        <div class="phase-head"><div class="n">Etapa 3</div><div class="t">Entrena día a día</div><div class="d">Necesita saber, cada día, si entrenar fuerte o descansar.</div></div>
+        <div class="phase-head"><div class="n">Etapa 4</div><div class="t">Come / se recupera</div><div class="d">Necesita claridad sobre qué comer, sin ruido contradictorio.</div></div>
+        <div class="phase-head"><div class="n">Etapa 5</div><div class="t">Mide progreso</div><div class="d">Necesita una señal externa de que va por buen camino.</div></div>
+        <div class="phase-head"><div class="n">Etapa 6</div><div class="t">Meseta o abandono</div><div class="d">Necesita algo que lo sostenga antes de bajar los brazos.</div></div>
+      </div>
 
-      <div class="row-label">Qué hace</div>
-      <div class="cell">Se anota en una carrera o decide un objetivo de salud/estética.</div>
-      <div class="cell">Contrata entrenador/clase grupal, o arma su rutina leyendo (DIY).</div>
-      <div class="cell">Decide entrenar fuerte, suave o descansar según sensación (60% de la encuesta).</div>
-      <div class="cell">Improvisa comidas o sigue reglas sueltas de redes; planifica el súper &ldquo;más o menos&rdquo;.</div>
-      <div class="cell">Mira el espejo, la balanza, o el reloj (si tiene); sube capturas a un chat de IA (power users).</div>
-      <div class="cell">Baja la frecuencia o abandona la app/rutina; en power users, se estanca en la fricción de integrar datos.</div>
+      <div class="icons-col">
+        <div class="icon-band icon-row icon-green"><div class="icon">🙂</div></div>
+        <div class="icon-band icon-row icon-yellow"><div class="icon">😐</div></div>
+        <div class="icon-band icon-row icon-red"><div class="icon">😟</div></div>
+      </div>
+      <div class="curve-wrap">
+        <svg viewBox="0 0 1500 380" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0" y="0" width="1500" height="126.67" fill="#dcecd6"/>
+          <rect x="0" y="126.67" width="1500" height="126.67" fill="#f7ecd3"/>
+          <rect x="0" y="253.34" width="1500" height="126.66" fill="#f6dcd9"/>
+          <line x1="250" y1="0" x2="250" y2="380" stroke="#ffffff" stroke-width="2"/>
+          <line x1="500" y1="0" x2="500" y2="380" stroke="#ffffff" stroke-width="2"/>
+          <line x1="750" y1="0" x2="750" y2="380" stroke="#ffffff" stroke-width="2"/>
+          <line x1="1000" y1="0" x2="1000" y2="380" stroke="#ffffff" stroke-width="2"/>
+          <line x1="1250" y1="0" x2="1250" y2="380" stroke="#ffffff" stroke-width="2"/>
 
-      <div class="row-label">Qué piensa / siente</div>
-      <div class="cell">Motivado, ambicioso, algo abrumado por no saber por dónde arrancar.</div>
-      <div class="cell">Alivio de delegar, pero desconfianza de que le entiendan su contexto real.</div>
-      <div class="cell">Duda: &ldquo;¿fuerte o descanso?&rdquo; — 50% duda de forma recurrente si lo hace bien.</div>
-      <div class="cell">Inseguridad de si come bien; ruido de información contradictoria (TikTok).</div>
-      <div class="cell">Orgullo si ve avance; frustración si no lo nota, aunque haya progreso real.</div>
-      <div class="cell">Desmotivado o resignado; para el power user, cansancio de hacer el trabajo manual.</div>
+          <path d="M 70 57
+                   C 125 57, 125 167, 180 167
+                   C 220 167, 230 152, 320 152
+                   C 380 152, 380 197, 430 197
+                   C 480 197, 480 247, 570 247
+                   C 620 247, 630 289, 680 289
+                   C 730 289, 725 270, 820 270
+                   C 870 270, 875 289, 930 289
+                   C 970 289, 975 247, 1070 247
+                   C 1120 247, 1125 266, 1180 266
+                   C 1230 266, 1225 289, 1320 289
+                   C 1370 289, 1375 327, 1430 327"
+                fill="none" stroke="#8a8f96" stroke-width="2.5"/>
 
-      <div class="row-label">Pain points</div>
-      <div class="cell pain">No sabe cómo estructurar el camino hacia el objetivo.</div>
-      <div class="cell pain">Coach humano caro o con disponibilidad limitada; DIY sin criterio experto.</div>
-      <div class="cell pain">Decide a ciegas; datos del wearable sin cruzar ni traducir a una acción.</div>
-      <div class="cell pain">Apps de nutrición fragmentadas; fricción de comprar y cocinar.</div>
-      <div class="cell pain">Sin feedback experto que confirme si el progreso es el correcto.</div>
-      <div class="cell pain">Churn: la app o el hábito se abandona por falta de sostén.</div>
+          <!-- Touchpoints: [x,y,label,color,labelpos] -->
+          <g font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="#33383e">
+            <circle cx="70" cy="57" r="9" fill="#fff" stroke="#4a9c5c" stroke-width="3"/>
+            <text x="70" y="34" text-anchor="middle">Fija su meta</text>
 
-      <div class="row-label">Oportunidad</div>
-      <div class="cell opp">Guía inicial personalizada, sin necesidad de saber "de fitness".</div>
-      <div class="cell opp">Estructura accesible que no reemplaza el vínculo humano donde ya existe.</div>
-      <div class="cell opp">Respuesta accionable a &ldquo;¿qué hago hoy?&rdquo;, integrando datos automáticamente.</div>
-      <div class="cell opp">Nutrición integrada al plan de entrenamiento, con lista de compras simple.</div>
-      <div class="cell opp">Feedback y ajuste continuo, no solo un número en una pantalla.</div>
-      <div class="cell opp">Coach que sostiene motivación y se anticipa antes de que el usuario abandone.</div>
+            <circle cx="180" cy="167" r="9" fill="#fff" stroke="#d9a13b" stroke-width="3"/>
+            <text x="180" y="147" text-anchor="middle">No sabe por dónde arrancar</text>
+
+            <circle cx="320" cy="152" r="9" fill="#fff" stroke="#d9a13b" stroke-width="3"/>
+            <text x="320" y="132" text-anchor="middle">Contrata clase / entrenador</text>
+
+            <circle cx="430" cy="197" r="9" fill="#fff" stroke="#d9a13b" stroke-width="3"/>
+            <text x="430" y="222" text-anchor="middle">O arma rutina DIY, sin certeza</text>
+
+            <circle cx="570" cy="247" r="9" fill="#fff" stroke="#c24a41" stroke-width="3"/>
+            <text x="570" y="270" text-anchor="middle">Decide por sensación, a ciegas</text>
+
+            <circle cx="680" cy="289" r="9" fill="#fff" stroke="#c24a41" stroke-width="3"/>
+            <text x="680" y="312" text-anchor="middle">Duda si lo está haciendo bien</text>
+
+            <circle cx="820" cy="270" r="9" fill="#fff" stroke="#c24a41" stroke-width="3"/>
+            <text x="820" y="250" text-anchor="middle">Nutrición improvisada</text>
+
+            <circle cx="930" cy="289" r="9" fill="#fff" stroke="#c24a41" stroke-width="3"/>
+            <text x="930" y="312" text-anchor="middle">Ruido contradictorio de redes</text>
+
+            <circle cx="1070" cy="247" r="9" fill="#fff" stroke="#d9a13b" stroke-width="3"/>
+            <text x="1070" y="227" text-anchor="middle">Mira espejo / balanza</text>
+
+            <circle cx="1180" cy="266" r="9" fill="#fff" stroke="#c24a41" stroke-width="3"/>
+            <text x="1180" y="289" text-anchor="middle">Sin feedback experto</text>
+
+            <circle cx="1320" cy="289" r="9" fill="#fff" stroke="#c24a41" stroke-width="3"/>
+            <text x="1320" y="269" text-anchor="middle">Baja la frecuencia</text>
+
+            <circle cx="1430" cy="327" r="9" fill="#fff" stroke="#c24a41" stroke-width="3"/>
+            <text x="1430" y="350" text-anchor="middle">Abandona la rutina / la app</text>
+          </g>
+        </svg>
+      </div>
+
+      <div class="icons-col">
+        <div class="spacer"></div>
+        <div class="icon-row icon-voice"><div class="icon">📣</div>Voz del<br>atleta</div>
+      </div>
+      <div class="quotes">
+        <div class="quote"><span class="label">Oportunidad</span>Guía inicial personalizada, sin necesidad de saber &ldquo;de fitness&rdquo;.</div>
+        <div class="quote"><span class="label">Oportunidad</span>Estructura accesible que no reemplaza el vínculo humano donde ya existe.</div>
+        <div class="quote"><span class="label">Oportunidad</span>Respuesta accionable a &ldquo;¿qué hago hoy?&rdquo;, integrando datos automáticamente.</div>
+        <div class="quote"><span class="label">Oportunidad</span>Nutrición integrada al plan, con lista de compras simple.</div>
+        <div class="quote"><span class="label">Oportunidad</span>Feedback y ajuste continuo, no solo un número en una pantalla.</div>
+        <div class="quote"><span class="label">Oportunidad</span>Coach que se anticipa y sostiene la motivación antes del abandono.</div>
+      </div>
     </div>
 
-    <div class="footnote">Fuente: síntesis propia sobre 13 entrevistas (Notion · Módulo 3) y encuesta "Cómo entrenás y tomás tus decisiones" (n=60). Recorrido con el problema, no con el producto Scala.</div>
+    <div class="footnote">Fuente: síntesis propia sobre 13 entrevistas (Notion · Módulo 3) y encuesta "Cómo entrenás y tomás tus decisiones" (n=60). La curva emocional es una lectura cualitativa de la dupla, no una medición directa.</div>
   </div>
 </body>
 </html>
