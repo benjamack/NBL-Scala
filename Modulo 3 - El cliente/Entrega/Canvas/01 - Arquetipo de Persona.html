@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Arquetipo de Persona — Scala, Módulo 3 NBL</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f4f5f6;
+    --card:#ffffff;
+    --ink:#1a1d21;
+    --muted:#5b6470;
+    --accent:#1f8a82;
+    --accent-soft:#e3f3f1;
+    --border:#e2e5e8;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--bg);
+    font-family:'Inter',sans-serif;
+    color:var(--ink);
+    padding:32px;
+  }
+  .sheet{
+    max-width:1400px;
+    margin:0 auto;
+    background:var(--card);
+    border-radius:16px;
+    border:1px solid var(--border);
+    padding:40px 48px;
+  }
+  .eyebrow{
+    font-size:11px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--accent);
+    font-weight:600;
+    margin-bottom:6px;
+  }
+  h1{
+    font-family:'Source Serif 4',serif;
+    font-size:30px;
+    margin:0 0 4px;
+    font-weight:700;
+  }
+  .subtitle{
+    color:var(--muted);
+    font-size:14px;
+    margin-bottom:28px;
+  }
+  .layout{
+    display:flex;
+    gap:40px;
+    align-items:flex-start;
+  }
+  .sidebar{
+    flex:0 0 300px;
+  }
+  .avatar{
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    background:var(--accent-soft);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:0 auto 20px;
+  }
+  .avatar svg{width:110px;height:110px;color:var(--accent);}
+  .info-title{
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:.1em;
+    color:var(--muted);
+    font-weight:600;
+    margin-bottom:12px;
+    text-align:center;
+  }
+  .info-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:16px 14px;
+  }
+  .info-item{
+    background:#fafbfb;
+    border:1px solid var(--border);
+    border-radius:10px;
+    padding:10px 12px;
+  }
+  .info-item .label{
+    font-size:10.5px;
+    text-transform:uppercase;
+    letter-spacing:.06em;
+    color:var(--muted);
+    font-weight:600;
+  }
+  .info-item .value{
+    font-size:12.5px;
+    margin-top:3px;
+    line-height:1.4;
+  }
+  .columns{
+    flex:1;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:0 40px;
+  }
+  section.block{
+    margin-bottom:26px;
+  }
+  section.block h2{
+    font-family:'Source Serif 4',serif;
+    font-size:16px;
+    font-weight:600;
+    margin:0 0 4px;
+    padding-bottom:8px;
+    border-bottom:2px solid var(--accent);
+    display:inline-block;
+  }
+  section.block p{
+    font-size:13.5px;
+    line-height:1.6;
+    color:#33383e;
+    margin:10px 0 0;
+  }
+  .footnote{
+    margin-top:24px;
+    padding-top:16px;
+    border-top:1px solid var(--border);
+    font-size:11px;
+    color:var(--muted);
+  }
+  @media print{
+    body{padding:0;background:#fff;}
+    .sheet{border:none;border-radius:0;}
+  }
+  @media (max-width:960px){
+    .layout{flex-direction:column;}
+    .sidebar{flex:none;width:100%;}
+    .columns{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+  <div class="sheet">
+    <div class="eyebrow">Scala · NBL Módulo 3 — El Cliente</div>
+    <h1>Arquetipo de Persona — v2 (post-campo)</h1>
+    <div class="subtitle">Segmento: atleta amateur comprometido (B2C) · Síntesis de 13 entrevistas + encuesta (n=60). Reemplaza la v1 intuitiva.</div>
+
+    <div class="layout">
+      <div class="sidebar">
+        <div class="avatar">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="12" cy="8" r="4"/>
+            <path d="M4 20c0-4.4 3.6-7 8-7s8 2.6 8 7"/>
+          </svg>
+        </div>
+        <div class="info-title">Información del arquetipo</div>
+        <div class="info-grid">
+          <div class="info-item"><div class="label">Edad</div><div class="value">25–55 años</div></div>
+          <div class="info-item"><div class="label">Nivel</div><div class="value">Amateur comprometido, 3+ veces/sem.</div></div>
+          <div class="info-item"><div class="label">Deportes</div><div class="value">Running, gimnasio, pilates, tenis, natación, fútbol, golf</div></div>
+          <div class="info-item"><div class="label">Wearable</div><div class="value">Opcional — 65% no usa (9/13 entrevistados)</div></div>
+        </div>
+      </div>
+
+      <div class="columns">
+        <div>
+          <section class="block">
+            <h2>Sobre el arquetipo</h2>
+            <p>Atleta amateur comprometido/a, perfil compuesto de 13 entrevistas reales (no un individuo único: la variedad de edad, deporte y género fue deliberada — 6 mujeres, 7 varones). Constancia inestable ("nunca tengo ganas pero voy"), autoexigencia alta y duda recurrente sobre si "lo está haciendo bien" (50% de la encuesta). Prioriza simplicidad: delega la estructura antes que planificarla.</p>
+          </section>
+          <section class="block">
+            <h2>Jobs — qué hace hoy</h2>
+            <p>Decide entrenar fuerte, suave o descansar según sensación del día (60% de la encuesta). Delega la estructura semanal a un entrenador o clase grupal, o se autogestiona leyendo/mirando redes. Improvisa la nutrición o sigue reglas sueltas de TikTok. Si tiene wearable, mira sueño y frecuencia cardíaca pero rara vez cruza esos datos entre sí.</p>
+          </section>
+          <section class="block">
+            <h2>Drivers — qué lo moviliza</h2>
+            <p>Ya paga o pagó por estructura (entrenador, clase, nutricionista). Tiene un objetivo concreto activo (carrera, evento, salud). El 73% ve natural gestionar todo conversando por chat o voz. Los usuarios más avanzados en datos quieren que la IA integre su información automáticamente en vez de cruzarla a mano.</p>
+          </section>
+        </div>
+        <div>
+          <section class="block">
+            <h2>Pains — frustraciones</h2>
+            <p>Falta de guía personalizada y accionable — el dolor dominante (reframe avalado por el mentor), no el exceso de datos. Duda recurrente sobre si lo hace bien. La nutrición es el punto más débil: qué comer, cómo planificar el súper. Fricción de integrar datos de wearable a mano. Desconfianza de una app genérica que no contemple su contexto real.</p>
+          </section>
+          <section class="block">
+            <h2>Gains — qué espera obtener</h2>
+            <p>Que le digan, cada día, exactamente qué hacer, ajustado a cómo viene su semana y su cuerpo. Simplicidad radical, sin tecnicismos ni sobrecarga de opciones. Mantener el vínculo humano donde ya lo valora — la IA como capa de organización, no reemplazo. Progreso visible hacia el objetivo, sin lesionarse.</p>
+          </section>
+          <section class="block">
+            <h2>Inhibidores — qué lo frena</h2>
+            <p>Fatiga de IA y desconfianza de que "lo conozca de verdad". Falta de aval profesional o médico — rechaza el estilo influencer sin sustento. Para parte del segmento, el vínculo humano es insustituible (el gimnasio como desconexión social). Paga solo después de ver valor: 72% dice sí o "tal vez", pero 63% gasta US$0 hoy.</p>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <div class="footnote">Fuente: síntesis propia sobre 13 entrevistas (Notion · Módulo 3) y encuesta "Cómo entrenás y tomás tus decisiones" (n=60). Ver detalle en <em>Modulo-3-Resultados-provisorios-entrevistas-y-encuesta.md</em>.</div>
+  </div>
+</body>
+</html>

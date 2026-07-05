@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Mapa de Empatía — Scala, Módulo 3 NBL</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f4f5f6;
+    --card:#ffffff;
+    --ink:#1a1d21;
+    --muted:#5b6470;
+    --border:#e2e5e8;
+    --piensa:#6a4fa8;
+    --ve:#2d5ec2;
+    --oye:#1f8a6e;
+    --hace:#c8871a;
+    --pains:#c04b4b;
+    --gains:#1f8a6e;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--bg);font-family:'Inter',sans-serif;color:var(--ink);padding:32px;}
+  .sheet{max-width:1400px;margin:0 auto;background:var(--card);border-radius:16px;border:1px solid var(--border);padding:40px 48px;}
+  .eyebrow{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#1f8a82;font-weight:600;margin-bottom:6px;}
+  h1{font-family:'Source Serif 4',serif;font-size:30px;margin:0 0 4px;font-weight:700;}
+  .subtitle{color:var(--muted);font-size:14px;margin-bottom:28px;}
+
+  .quadrants{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+    position:relative;
+  }
+  .center-label{
+    position:absolute;
+    top:50%;left:50%;
+    transform:translate(-50%,-50%);
+    background:var(--ink);
+    color:#fff;
+    font-size:12px;
+    font-weight:600;
+    padding:10px 16px;
+    border-radius:999px;
+    z-index:2;
+    text-align:center;
+    max-width:170px;
+    line-height:1.3;
+  }
+  .quad{
+    border-radius:14px;
+    padding:22px 24px;
+    border:1px solid var(--border);
+    background:#fafbfb;
+  }
+  .quad h2{
+    font-size:14px;
+    text-transform:uppercase;
+    letter-spacing:.06em;
+    font-weight:600;
+    margin:0 0 12px;
+  }
+  .quad ul{margin:0;padding-left:18px;font-size:13px;line-height:1.6;color:#33383e;}
+  .quad ul li{margin-bottom:6px;}
+  .q-piensa h2{color:var(--piensa);} .q-piensa{border-top:4px solid var(--piensa);}
+  .q-ve h2{color:var(--ve);} .q-ve{border-top:4px solid var(--ve);}
+  .q-oye h2{color:var(--oye);} .q-oye{border-top:4px solid var(--oye);}
+  .q-hace h2{color:var(--hace);} .q-hace{border-top:4px solid var(--hace);}
+
+  .strip{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+    margin-top:20px;
+  }
+  .strip .quad{background:#fff;}
+  .q-pains h2{color:var(--pains);} .q-pains{border-top:4px solid var(--pains);}
+  .q-gains h2{color:var(--gains);} .q-gains{border-top:4px solid var(--gains);}
+
+  .footnote{margin-top:24px;padding-top:16px;border-top:1px solid var(--border);font-size:11px;color:var(--muted);}
+  @media print{ body{padding:0;background:#fff;} .sheet{border:none;border-radius:0;} }
+  @media (max-width:860px){ .quadrants,.strip{grid-template-columns:1fr;} .center-label{display:none;} }
+</style>
+</head>
+<body>
+  <div class="sheet">
+    <div class="eyebrow">Scala · NBL Módulo 3 — El Cliente</div>
+    <h1>Mapa de Empatía — v2 (post-campo)</h1>
+    <div class="subtitle">Citas y patrones reales de las 13 entrevistas y la encuesta (n=60), reemplazando las hipótesis de la v1.</div>
+
+    <div class="quadrants">
+      <div class="center-label">Atleta amateur comprometido/a</div>
+      <div class="quad q-piensa">
+        <h2>¿Qué piensa y siente?</h2>
+        <ul>
+          <li>&ldquo;Nunca tengo ganas&rdquo; pero entrena igual, por autopresión de estar pagando (Graciela).</li>
+          <li>&ldquo;Todos los días siento que no cumplo el objetivo&rdquo; — autoexigencia constante (Graciela).</li>
+          <li>Duda recurrente sobre si &ldquo;lo que hago está bien&rdquo;: 50% de la encuesta lo reporta diaria o semanalmente.</li>
+          <li>Ansiedad de lesionarse o estancarse si decide mal el día.</li>
+          <li>Orgullo y subidón emocional al lograr un PR (Matías: &ldquo;emocionalmente te la suben&rdquo;).</li>
+        </ul>
+      </div>
+      <div class="quad q-ve">
+        <h2>¿Qué ve?</h2>
+        <ul>
+          <li>Entrenadores y coaches de yoga que sí adaptan ejercicios por lesión o por el ciclo menstrual (Maitena).</li>
+          <li>Amigos compartiendo logros en grupos de WhatsApp o Strava (Matías).</li>
+          <li>Contenido de fitness en redes con información contradictoria sobre qué comer.</li>
+          <li>Wearables y apps que sus pares usan, sin saber bien cómo interpretarlos.</li>
+        </ul>
+      </div>
+      <div class="quad q-oye">
+        <h2>¿Qué oye?</h2>
+        <ul>
+          <li>TikTok e Instagram con consejos nutricionales contradictorios (&ldquo;no sé qué es verdad y qué es mentira&rdquo;, Maitena).</li>
+          <li>Su entrenador corrigiendo en el momento (&ldquo;ya cargás mucho peso&rdquo;, Graciela).</li>
+          <li>Recomendaciones de su grupo de running o del gimnasio.</li>
+          <li>Objeciones propias repetidas: fatiga de IA, falta de aval profesional/médico.</li>
+        </ul>
+      </div>
+      <div class="quad q-hace">
+        <h2>¿Qué dice y hace?</h2>
+        <ul>
+          <li>Delega 100% a la clase grupal o entrenador; no ve ni construye su propio plan (Amparo, Graciela).</li>
+          <li>Arma sus rutinas leyendo por su cuenta, sin plan ni entrenador (Tobías).</li>
+          <li>Sube capturas de pantalla de su wearable a un chat de IA para interpretarlas (Hernán).</li>
+          <li>Decide el día por sensación (60%) y ajusta sobre la marcha (Matías).</li>
+          <li>Pide simplicidad radical: &ldquo;que no me diga chauchas de Arabia&rdquo; (Graciela).</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="strip">
+      <div class="quad q-pains">
+        <h2>Pains</h2>
+        <ul>
+          <li>Falta de guía personalizada y accionable (dolor dominante, no exceso de datos).</li>
+          <li>Fragmentación: ninguna app resuelve todo.</li>
+          <li>Nutrición como punto más débil.</li>
+          <li>Fricción de integrar datos para quien sí tiene wearable.</li>
+          <li>Desconfianza de una experiencia genérica.</li>
+        </ul>
+      </div>
+      <div class="quad q-gains">
+        <h2>Gains</h2>
+        <ul>
+          <li>Que le digan qué hacer hoy, ajustado a su semana y su cuerpo.</li>
+          <li>Un plan simple, sin tecnicismos ni sobrecarga.</li>
+          <li>Mantener el vínculo humano donde ya lo valora.</li>
+          <li>Progreso visible y sostenido, sin lesionarse.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footnote">Fuente: síntesis propia sobre 13 entrevistas (Notion · Módulo 3) y encuesta "Cómo entrenás y tomás tus decisiones" (n=60).</div>
+  </div>
+</body>
+</html>

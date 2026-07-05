@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Customer Journey Map — Scala, Módulo 3 NBL</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f4f5f6;
+    --card:#ffffff;
+    --ink:#1a1d21;
+    --muted:#5b6470;
+    --border:#e2e5e8;
+    --accent:#1f8a82;
+    --pain:#c04b4b;
+    --opp:#1f8a6e;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--bg);font-family:'Inter',sans-serif;color:var(--ink);padding:32px;}
+  .sheet{max-width:1500px;margin:0 auto;background:var(--card);border-radius:16px;border:1px solid var(--border);padding:40px 48px;}
+  .eyebrow{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:6px;}
+  h1{font-family:'Source Serif 4',serif;font-size:30px;margin:0 0 4px;font-weight:700;}
+  .subtitle{color:var(--muted);font-size:14px;margin-bottom:28px;}
+
+  .journey{
+    display:grid;
+    grid-template-columns:150px repeat(6, 1fr);
+    gap:10px;
+  }
+  .row-label, .stage-header, .cell{
+    border-radius:10px;
+    padding:14px 14px;
+    font-size:12.5px;
+    line-height:1.5;
+  }
+  .row-label{
+    background:transparent;
+    display:flex;
+    align-items:center;
+    font-size:11.5px;
+    text-transform:uppercase;
+    letter-spacing:.06em;
+    font-weight:600;
+    color:var(--muted);
+  }
+  .stage-header{
+    background:var(--ink);
+    color:#fff;
+    font-weight:600;
+    text-align:center;
+    font-size:12.5px;
+  }
+  .stage-header .n{
+    display:block;
+    font-size:10.5px;
+    opacity:.65;
+    margin-bottom:2px;
+    font-weight:500;
+  }
+  .cell{
+    background:#fafbfb;
+    border:1px solid var(--border);
+    color:#33383e;
+  }
+  .cell.pain{border-left:3px solid var(--pain);}
+  .cell.opp{border-left:3px solid var(--opp); background:#f2f9f6;}
+
+  .footnote{margin-top:24px;padding-top:16px;border-top:1px solid var(--border);font-size:11px;color:var(--muted);}
+  @media print{ body{padding:0;background:#fff;} .sheet{border:none;border-radius:0;} }
+  @media (max-width:1100px){
+    .journey{grid-template-columns:1fr; }
+    .row-label{margin-top:14px;}
+  }
+</style>
+</head>
+<body>
+  <div class="sheet">
+    <div class="eyebrow">Scala · NBL Módulo 3 — El Cliente</div>
+    <h1>Customer Journey Map — v2 (post-campo)</h1>
+    <div class="subtitle">Recorrido del atleta con el problema (no con Scala) — dónde duele más y dónde está la oportunidad.</div>
+
+    <div class="journey">
+      <div class="row-label"></div>
+      <div class="stage-header"><span class="n">1</span>Se fija un objetivo</div>
+      <div class="stage-header"><span class="n">2</span>Busca estructura</div>
+      <div class="stage-header"><span class="n">3</span>Entrena día a día</div>
+      <div class="stage-header"><span class="n">4</span>Come / se recupera</div>
+      <div class="stage-header"><span class="n">5</span>Mide progreso</div>
+      <div class="stage-header"><span class="n">6</span>Meseta o abandono</div>
+
+      <div class="row-label">Qué hace</div>
+      <div class="cell">Se anota en una carrera o decide un objetivo de salud/estética.</div>
+      <div class="cell">Contrata entrenador/clase grupal, o arma su rutina leyendo (DIY).</div>
+      <div class="cell">Decide entrenar fuerte, suave o descansar según sensación (60% de la encuesta).</div>
+      <div class="cell">Improvisa comidas o sigue reglas sueltas de redes; planifica el súper &ldquo;más o menos&rdquo;.</div>
+      <div class="cell">Mira el espejo, la balanza, o el reloj (si tiene); sube capturas a un chat de IA (power users).</div>
+      <div class="cell">Baja la frecuencia o abandona la app/rutina; en power users, se estanca en la fricción de integrar datos.</div>
+
+      <div class="row-label">Qué piensa / siente</div>
+      <div class="cell">Motivado, ambicioso, algo abrumado por no saber por dónde arrancar.</div>
+      <div class="cell">Alivio de delegar, pero desconfianza de que le entiendan su contexto real.</div>
+      <div class="cell">Duda: &ldquo;¿fuerte o descanso?&rdquo; — 50% duda de forma recurrente si lo hace bien.</div>
+      <div class="cell">Inseguridad de si come bien; ruido de información contradictoria (TikTok).</div>
+      <div class="cell">Orgullo si ve avance; frustración si no lo nota, aunque haya progreso real.</div>
+      <div class="cell">Desmotivado o resignado; para el power user, cansancio de hacer el trabajo manual.</div>
+
+      <div class="row-label">Pain points</div>
+      <div class="cell pain">No sabe cómo estructurar el camino hacia el objetivo.</div>
+      <div class="cell pain">Coach humano caro o con disponibilidad limitada; DIY sin criterio experto.</div>
+      <div class="cell pain">Decide a ciegas; datos del wearable sin cruzar ni traducir a una acción.</div>
+      <div class="cell pain">Apps de nutrición fragmentadas; fricción de comprar y cocinar.</div>
+      <div class="cell pain">Sin feedback experto que confirme si el progreso es el correcto.</div>
+      <div class="cell pain">Churn: la app o el hábito se abandona por falta de sostén.</div>
+
+      <div class="row-label">Oportunidad</div>
+      <div class="cell opp">Guía inicial personalizada, sin necesidad de saber "de fitness".</div>
+      <div class="cell opp">Estructura accesible que no reemplaza el vínculo humano donde ya existe.</div>
+      <div class="cell opp">Respuesta accionable a &ldquo;¿qué hago hoy?&rdquo;, integrando datos automáticamente.</div>
+      <div class="cell opp">Nutrición integrada al plan de entrenamiento, con lista de compras simple.</div>
+      <div class="cell opp">Feedback y ajuste continuo, no solo un número en una pantalla.</div>
+      <div class="cell opp">Coach que sostiene motivación y se anticipa antes de que el usuario abandone.</div>
+    </div>
+
+    <div class="footnote">Fuente: síntesis propia sobre 13 entrevistas (Notion · Módulo 3) y encuesta "Cómo entrenás y tomás tus decisiones" (n=60). Recorrido con el problema, no con el producto Scala.</div>
+  </div>
+</body>
+</html>
