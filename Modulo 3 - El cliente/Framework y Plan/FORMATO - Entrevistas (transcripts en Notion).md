@@ -66,3 +66,8 @@
 | 08 | Matías Tahta | Nico | https://app.notion.com/p/38723e73764c81198aa7dec770c29533 |
 | 09 | Hernán de la Cárcova | Nico | https://app.notion.com/p/39023e73764c81bda3c1d25d1c735f48 |
 | 10 | Maitena Galíndez | Nico | https://app.notion.com/p/39323e73764c81a0ad36c6c464b28eb9 |
+| 11 | Graciela Bopolo | Benja | https://app.notion.com/p/39423e73764c8099af07ebb55f7084b2 |
+| 12 | Tomás Giampaoletti | Benja | https://app.notion.com/p/39423e73764c80e5a6dfec3fe0719e9c |
+| 13 | Amparo Atalah | Benja | https://app.notion.com/p/39423e73764c804dbf66eb0e1c4aaad1 |
+| 14 | Simon Alexander | Nico | https://app.notion.com/p/39523e73764c81f082cfd4fb7b8244d0 |
+| 15 | Tomás Gilles | Nico | https://app.notion.com/p/39523e73764c817e8634c15ea5dd3df8 |

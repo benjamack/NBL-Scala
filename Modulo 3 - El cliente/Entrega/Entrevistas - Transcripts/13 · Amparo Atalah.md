@@ -1,9 +1,122 @@
 # 13 · Amparo Atalah
 
-Meeting Title: Entrevista Ampi
-Date: Jul 5
-Meeting participants: Benjamin Mackinnon
+## Ficha
 
-Transcript:
+| Campo | Dato |
+| --- | --- |
+| Entrevistado | Amparo Atalah |
+| Fecha | 5 jul 2026 |
+| Entrevistador | Benjamín Mackinnon |
+| Profesión | Analista en una corporación (full time) |
+| Deportes | Pilates (2x/sem, clases grupales) + fútbol (sábados) |
+| Wearable | No (le gustaría tener métricas) |
+| Entrenador/nutri | No; va a clases donde le dicen qué hacer; sin nutricionista |
+| Paga por fitness | Clases de pilates; sin apps ni suscripciones |
 
-Me: Ah, bueno, no me acuerdo. Ah, bueno, pues. Es una gafa, es un producto, esto esto es una esto es un, son gafas para ciegos. Del colmo. No, pues a los ciegos le, a algunos les afecta, No está bueno esa publicidad que sea para ciegos, Es un poco gracioso hacer, que tu mercado sea anteojos para ciegos es como hacer teclados para mancos, boludo. No, pero sí del hombre, mira, el loom and technology, que me parece que la idea es te comunicaste. Bueno, Amparo, entrevista a Amparo. Vamos a hacer todo tu pregunta. No importa, está bien, salen cosas buenas. Esta voy a servir mucho. Las preguntas para Ampi, van a ser las siguientes. Bueno, Amparo, Entrevista número número trece. Para ¿Querés contarnos un poco a qué te dedicás ¿qué deporte deportes hacés? En general, introducirte. Me dedico laboralmente. Tu vida. Te dedicas a ser mi novia. Tiempo completo. Tiempo completo. Trabajo, en una corpo, Mentira. En grupo, Judith. Qué teriste. Como analista, o sea, que trabajó full time, y en mi tiempo libre hago pilates, dos veces por semana, y juego fútbol todos los fines de semana, los sábados. Qué bueno, te divertía tu vida, Palita. ¿Y hace cuánto tenés este estilo de vida deportista, así de...? Fútbol y pilates. Bastante ya. Tengo baches en el medio, capaz que corto, pero no sé, dos años. Hace dos años. Y O sea, toda la toda mi vida está entrenando distintas cosas, fui cambiando, iba al gimnasio, iba a clases. Pero siempre, no no tengo mucha perseverancia, o... ¿Cómo se dice? Sí, constancia. Y y, está bien. ¿Y por qué razón hace, o sea, tiene algún por qué la combinación de pilates con futón? ¿Son dos cosas que te gustan? No, porque me cuesta mucho entrenar, y necesito ir en un lugar que me digan qué hacer, cómo y que me perrijan, Y las demás cosas las dejaba, entonces, Gilette es el único remedio. Que me gusta, me motiva y tengo que ir y no pensar en qué qué tengo que hacer. Muy bien. Siendo más al día a día de de de tu vida, ¿cómo es una una semana de entrenamiento típica tuya? No vas a ser pirates por semana y... Fútbol. Y fútbol. Pasaría caminando. Pero ¿cómo lo combinas? O sea, con tu vida laboral, o sea, ¿cómo es la semana tuya, en general? Ah, no, voy a la oficina tres veces por semana, Los martes, quedo a la piscina, después voy a pilates en la tarde. Y los jueves también, la noche, voy a las ocho de la noche, y fútbol, no, es una cantidad de sábados, y va bajando el horario. Bien. Y los entrenamientos, tanto fútbol, bueno, fútbol claramente no pero pilates capaz sí, los haces en grupo, los haces sola, como O sea, son clases. Son clases grupales. Ok. Y Bien. ¿Y tenés algún algún plan cuando entrenás así por, o sea, algún plan general o o en o o para fútbol tenés algún plan, para pilates tenés algún plan, cómo se maneja eso? No, no tengo plan. O sea, es lo que más me cuesta armarme. Y lo que más me traba al momento de entrenar. Por eso prefiero ir una clase. Bien. ¿Y y el el hecho de no tener un plan te preocupa de, o sea, no, capaz, preocupas una onda, pero ¿te gustaría capaz tener un plan y poder ver tu tu progreso o o preferís delegarlo a eso? O sea, ahí lo vino, o sea, tengo un plan en ese sentido. O sea, estás delegando. Si te lo hace alguien, no te lo pero a a lo que oís que vos hoy, vos como lo que me contás, hasta ahora es que pilates y fútbol no no no no no no ves tu plan, sino que va, llegas a la clase de pilates y te dicen qué hacer, pero vos no, en ningún momento ves ves capaz el seguimiento de tu rutina y qué se viene más adelante? Si estás en una semana que tenés que ir meterle más fuerte, después si si estás si estás una semana que va a ser más tranqui y sos consciente de eso, vos, o sea, preferís saber eso cuando estás cuando estás entrenando o preferís delegarlo y que se ocupe otro cien por ciento y no saber qué? Pasa por atrás? Pero no me mata así, o sea, un personal que llame métricas y sabe cómo vengo y más, y medidas Ok. Lo que le daría. Ok. Y cuando entrenaste, tenés algún objetivo concreto, Tipo, ¿qué buscó? Que buscás, tenés, lo hacés por algo en especial o...? Sí. Tonificar. Ser una princesa. Bien, ¿Y alguna vez te sentiste como que no no estabas llevando a esta objetivo de de... Tonificación? Sí, Sí. O capaz cuando empiezo algo que siento que no está existiendo. O sea, yo me siento bien cuando me duele el cuerpo al otro día en fila. Me odio, pero dije, ah, bueno, Hice las cosas bien. Un poquito más. Bien. ¿Cómo decidís cómo decidís cuándo un día le metés más fuerte o vas más tranqui? Sí, depende de la energía que tengo. ¿Cómo te estás sintiendo ese día? ¿Tenés algún dolor, alguna molestia, lesión? Perfecto. ¿Y tú viste en algún momento? Bien. Alguna vez te pasaste de de rosca entrenando, ¿te metiste de más más de lo que tu cuerpo podía. Sí. Tenía momentos antes. Como hacía croquis. Pero, aparte, me van muy doloridas. Empezaba así, bueno, capaz tuve un poco de satiety de alta pero no tanto como Ah, ok. ¿Y cómo cómo manejaste eso? Qué hiciste frente a ese esa molestia, dolor? Nada, ¿sabes?, que sí, ya ajustar un poco con intensidad. Bien. Después, yendo a la parte más nutricional, tenés un algún plan de nutrición?, ¿tenés algún algún nutricionista ¿Cómo cómo lo llevás? O siempre trato de comer sano dentro de lo que sé. Pero tampoco me me explico. Con el algo que tengo ¿Fue la la de sale de copago, mí. ¿Cómo se llama? Tenemos Bien. Y y en cuanto al al entrenamiento, ¿tenés alguna de nutrición previa, durante y posterior al más cerca de ese rango? No. Lo ves necesario pues estás bien. Sí, podemos. Bien. ¿Usás algún reloj deportivo? No. ¿Te gustaría? Tener tus métricas? Sí. ¿Y alguna aplicación? Para el deporte? No. ¿La alto? No, no. No usas aplicaciones, entonces, tampoco pagas ninguna suscripción de nada. Me imagino. Ok. Bien. No te voy a explicar lo que estamos haciendo, pero te pregunto, ¿qué qué le pedirías a a a a nuestra aplicación, a nuestro O sea, ¿qué esperás de nuestra aplicación?, ¿qué para qué la usarías? O sea, me gustaría que me diga qué comer y cómo entregar, para poder llegar al objetivo. O sea, siento que me falta de porque no estoy segura de que se te puede hacer, me va voy a conseguir lo que quiero. ¿Sentís que que capaz algo de la motivación viene de ver ver tu de poder ver tu evolutivo y poder ver una mejora más allá de cuando terminás al espejo en cuanto a la data de cómo te estás sintiendo? Bien. ¿Y hay algo de eso que te puede llegar a generar desconfianza? En en la en que sea una aplicación y No ¿no? Profesional. Métricas mías, de mí, no. O sea, si si la aplicación no me me diría nada, y yo solo le cargo que cómo, sí, me haría Bueno. ¿Algo más que nos quieras comentar? ¿Qué día? Ay, yo también. Muchas gracias, friezacita.
+> **Fuente:** entrevista **presencial**; Granola grabó todo bajo un solo hablante, así que el transcript se reconstruyó separando preguntas y respuestas en base al contenido. Limpiado según el formato estándar. `Benja` = entrevistador, `Amparo` = entrevistada.
+
+---
+
+## Transcript
+
+**Benja:** Amparo, entrevista número trece. ¿Querés contarnos a qué te dedicás, qué deportes hacés, e introducirte un poco?
+
+**Amparo:** Trabajo en una corporación como analista, full time. En mi tiempo libre hago pilates dos veces por semana y juego al fútbol todos los sábados.
+
+**Benja:** ¿Hace cuánto llevás este estilo de vida deportista, fútbol y pilates?
+
+**Amparo:** Un tiempo ya, con baches en el medio. Dos años más o menos. Toda mi vida estuve entrenando distintas cosas, fui cambiando —iba al gimnasio, a clases—, pero no tengo mucha constancia.
+
+**Benja:** ¿Hay alguna razón para la combinación de pilates con fútbol? ¿Son dos cosas que te gustan?
+
+**Amparo:** Es que me cuesta mucho entrenar, y necesito ir a un lugar donde me digan qué hacer y me corrijan. Las demás cosas las dejaba; el pilates es el único que me gusta, me motiva, y voy sin tener que pensar qué tengo que hacer.
+
+**Benja:** Yendo al día a día, ¿cómo es una semana típica tuya, combinada con el trabajo?
+
+**Amparo:** Voy a la oficina tres veces por semana. Los martes voy a pilates a la tarde, los jueves a la noche a las ocho, y fútbol los sábados.
+
+**Benja:** El pilates son clases grupales, ¿no?
+
+**Amparo:** Sí, clases grupales.
+
+**Benja:** ¿Y tenés algún plan cuando entrenás, para fútbol o pilates?
+
+**Amparo:** No, no tengo plan. Es lo que más me cuesta armarme, y lo que más me traba al momento de entrenar. Por eso prefiero ir a una clase.
+
+**Benja:** ¿El no tener un plan te preocupa? ¿Te gustaría tener uno y ver tu progreso, o preferís delegarlo?
+
+**Amparo:** Preferiría tenerlo si me lo hace alguien. Hoy no veo el seguimiento de mi rutina ni qué se viene más adelante —si una semana tengo que meterle más fuerte o ir más tranqui—. Estaría bueno un personal que lleve métricas y sepa cómo vengo.
+
+**Benja:** ¿Cuando entrenás tenés algún objetivo concreto?
+
+**Amparo:** Sí, tonificar.
+
+**Benja:** ¿Alguna vez sentiste que no estabas llegando a ese objetivo?
+
+**Amparo:** Sí, a veces cuando empiezo algo siento que no está funcionando. Yo me siento bien cuando me duele el cuerpo al otro día: ahí digo "hice las cosas bien".
+
+**Benja:** ¿Cómo decidís cuándo un día le metés más fuerte o vas más tranqui?
+
+**Amparo:** Depende de la energía que tengo, de cómo me estoy sintiendo ese día.
+
+**Benja:** ¿Tenés algún dolor, molestia o lesión?
+
+**Amparo:** No.
+
+**Benja:** ¿Alguna vez te pasaste de rosca entrenando?
+
+**Amparo:** Sí, antes. Quedaba muy dolorida. Tuve algo de sobrecarga, pero no tanto.
+
+**Benja:** ¿Cómo lo manejaste?
+
+**Amparo:** Ajustando un poco la intensidad.
+
+**Benja:** Yendo a la nutrición, ¿tenés algún plan o nutricionista?
+
+**Amparo:** No, trato de comer sano dentro de lo que sé, pero no me manejo con nada específico.
+
+**Benja:** ¿Y una estrategia de nutrición previa, durante o post entrenamiento?
+
+**Amparo:** No, no lo veo necesario.
+
+**Benja:** ¿Usás algún reloj deportivo?
+
+**Amparo:** No.
+
+**Benja:** ¿Te gustaría tener tus métricas?
+
+**Amparo:** Sí.
+
+**Benja:** ¿Y alguna aplicación para el deporte?
+
+**Amparo:** No, ninguna. Tampoco pago ninguna suscripción.
+
+**Benja:** ¿Qué le pedirías a nuestra aplicación? ¿Para qué la usarías?
+
+**Amparo:** Me gustaría que me diga qué comer y cómo entrenar para poder llegar al objetivo. Siento que me falta eso, porque no estoy segura de que lo que hago me vaya a conseguir lo que quiero.
+
+**Benja:** ¿Sentís que parte de la motivación viene de poder ver tu evolución y una mejora, más allá del espejo?
+
+**Amparo:** Sí.
+
+**Benja:** ¿Y hay algo que te generaría desconfianza?
+
+**Amparo:** Que no sea profesional. Y si la aplicación no me dice nada y yo sola le tengo que cargar todas mis métricas, eso me daría desconfianza.
+
+**Benja:** Perfecto. Muchas gracias.
+
+---
+
+## Notas rápidas (señales sobre las hipótesis)
+
+Apuntar acá las observaciones crudas antes de pasarlas al Tracker. **Perfil de baja constancia, no-tech, que necesita estructura y guía externa — valida el encuadre afinado del Módulo 3 ("falta de guía personalizada y accionable").**
+
+- **H1 (datos sin accionar):** No usa wearable ni apps; no tiene datos. Le gustaría tener métricas y ver evolución, pero no quiere ser ella la que cargue todo (fricción).
+- **H2 (apps fragmentadas + coach):** Resuelve con clases grupales (pilates) donde le dicen qué hacer; sin coach personal ni nutricionista.
+- **H3 (decisión diaria):** Decide por energía/sensación del día. Su métrica de "hice bien" es el dolor muscular al día siguiente.
+- **H4 (disposición a pagar):** Paga clases de pilates; sin apps ni suscripciones. Disposición asociada a un servicio presencial que la haga ir.
+- **H5 (wearable opcional):** No wearable, pero le gustaría tener métricas → deseable, no requisito.
+- **Core pain / H6:** Su mayor traba es armarse un plan; por eso delega en clases. Pide explícitamente que le digan **qué comer y cómo entrenar** para llegar al objetivo (tonificar). Perfil que necesita estructura + guía → target claro de "accionar > mostrar".
+- **Nutrición:** Sin plan; "trato de comer sano" sin criterio. Pide que la app le diga qué comer.
+- **Riesgo / objeción:** Desconfía si no es "profesional" y si tiene que cargar ella misma toda la data (quiere que la app aporte, no solo registre).
+- **Job emocional:** Tonificar / verse bien; necesita motivación externa y estructura por baja constancia.
