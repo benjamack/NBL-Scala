@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Value Proposition Canvas · Scala · Módulo 4 NBL</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f4f5f6;
+    --card:#ffffff;
+    --ink:#1a1d21;
+    --muted:#5b6470;
+    --teal:#1f8a82;
+    --teal-soft:#e3f3f1;
+    --gold:#c8871a;
+    --gold-soft:#faf1e0;
+    --border:#e2e5e8;
+    --value:#2b3a67;
+    --value-soft:#e8ecf6;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--bg);font-family:'Inter',sans-serif;color:var(--ink);padding:32px;}
+  .sheet{max-width:1580px;margin:0 auto 40px;background:var(--card);border-radius:16px;border:1px solid var(--border);padding:38px 44px;}
+  .eyebrow{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);font-weight:600;margin-bottom:6px;}
+  h1{font-family:'Source Serif 4',serif;font-size:26px;margin:0 0 4px;font-weight:700;}
+  .subtitle{color:var(--muted);font-size:13px;margin-bottom:8px;max-width:1100px;}
+  .frente-tag{display:inline-block;font-size:12px;font-weight:700;padding:5px 12px;border-radius:999px;margin-bottom:22px;}
+  .tag-gold{background:var(--gold-soft);color:var(--gold);}
+  .tag-teal{background:var(--teal-soft);color:var(--teal);}
+
+  .canvas{display:grid;grid-template-columns:1fr 44px 1fr;gap:0;align-items:stretch;}
+  .side-title{font-size:12px;text-transform:uppercase;letter-spacing:.08em;font-weight:700;margin:0 0 12px;color:var(--muted);}
+  .panel{display:flex;flex-direction:column;gap:14px;}
+
+  /* Value map (left) */
+  .valuemap{background:#fbfcfe;border:1px solid var(--border);border-radius:16px 4px 4px 16px;padding:22px 22px 22px 24px;}
+  .profile{background:#fbfcfe;border:1px solid var(--border);border-radius:4px 16px 16px 4px;padding:22px 24px 22px 22px;}
+
+  .block h2{
+    font-size:12px;text-transform:uppercase;letter-spacing:.05em;font-weight:700;margin:0 0 8px;
+    padding-bottom:5px;display:inline-block;
+  }
+  .block ul{margin:0;padding-left:16px;font-size:12.5px;line-height:1.5;color:#2f343a;}
+  .block ul li{margin-bottom:5px;}
+  .block .lead{font-size:12.5px;line-height:1.5;color:#2f343a;margin:0 0 6px;}
+
+  /* left = value map: value blue tint */
+  .valuemap .block h2{border-bottom:2px solid var(--value);color:var(--value);}
+  /* right = customer profile: accent per persona */
+  .profile .block h2{border-bottom:2px solid var(--accent);color:var(--accent);}
+  .flor{--accent:var(--teal);--accent-soft:var(--teal-soft);}
+  .fede{--accent:var(--gold);--accent-soft:var(--gold-soft);}
+
+  .fitcol{display:flex;flex-direction:column;align-items:center;justify-content:center;}
+  .fitcol .arrow{font-size:26px;color:var(--muted);line-height:1;}
+  .fitcol .fitlabel{writing-mode:vertical-rl;transform:rotate(180deg);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-top:8px;}
+
+  .kicker{font-size:11px;font-weight:700;color:var(--value);text-transform:uppercase;letter-spacing:.06em;margin:0 0 4px;}
+  .fitnote{margin-top:16px;background:var(--value-soft);border-radius:12px;padding:14px 18px;font-size:12.5px;line-height:1.55;color:#2b3350;}
+  .fitnote b{color:var(--value);}
+
+  .footnote{margin-top:22px;padding-top:14px;border-top:1px solid var(--border);font-size:11px;color:var(--muted);}
+  @media print{ body{padding:0;background:#fff;} .sheet{border:none;border-radius:0;box-shadow:none;} }
+</style>
+</head>
+<body>
+
+<!-- ================= FRENTE 1 · FEDE (con wearable) ================= -->
+<div class="sheet" id="fede">
+  <div class="eyebrow">Scala · NBL Módulo 4 · Propuesta de Valor</div>
+  <h1>Value Proposition Canvas · Frente A · Atleta CON wearable (Fede)</h1>
+  <div class="subtitle">El lado derecho (perfil del cliente) proviene del trabajo de campo validado en el Módulo 3. El lado izquierdo (mapa de valor) es el diseño de la propuesta de Scala para este frente: convertir el dato del wearable en una decisión diaria.</div>
+  <span class="frente-tag tag-gold">Frente A · ~35% del segmento · tiene datos, no los acciona</span>
+
+  <div class="canvas">
+    <!-- VALUE MAP -->
+    <div>
+      <p class="side-title">Mapa de valor · Scala</p>
+      <div class="valuemap panel">
+        <div class="block">
+          <h2>Productos y servicios</h2>
+          <ul>
+            <li>Coach de IA <b>agéntico y conversacional</b> como interfaz principal.</li>
+            <li>Sync automático con <b>Garmin / Apple Health</b> (biometría continua).</li>
+            <li><b>Readiness Score</b> propio (sueño + HRV + estrés).</li>
+            <li>Dashboard biométrico con drill-down + <b>insight del coach</b> por métrica.</li>
+            <li>Planes de entrenamiento generados y <b>reajustados por IA</b> (session type + progresión).</li>
+            <li>Nutrición con análisis por foto; memoria persistente del coach.</li>
+          </ul>
+        </div>
+        <div class="block">
+          <h2>Aliviadores de dolor</h2>
+          <ul>
+            <li>Convierte la biometría en una <b>recomendación diaria accionable</b> (readiness → "hoy hacé X").</li>
+            <li>Integra el wearable <b>automáticamente</b>: elimina las capturas y el cruce manual.</li>
+            <li>Cruza sueño, HRV y estrés en un <b>único score interpretado</b>.</li>
+            <li>Una sola app <b>reemplaza el stack fragmentado</b>.</li>
+            <li>El coach <b>recuerda el contexto</b> entre sesiones (lesión, preferencias).</li>
+          </ul>
+        </div>
+        <div class="block">
+          <h2>Creadores de alegría</h2>
+          <ul>
+            <li>Interpretación en lenguaje natural: "dormiste poco y tu HRV bajó, hoy hacé recuperación".</li>
+            <li>El plan <b>se re-ajusta solo</b> con la biometría entrante.</li>
+            <li>Nutrición conectada a la <b>carga de entrenamiento</b> del día.</li>
+            <li>Briefing diario proactivo que <b>alerta antes de estancarse</b>.</li>
+            <li>Todo desde una <b>interfaz conversacional</b> (chat / voz).</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- FIT -->
+    <div class="fitcol">
+      <div class="arrow">→</div>
+      <div class="fitlabel">Fit</div>
+    </div>
+
+    <!-- CUSTOMER PROFILE -->
+    <div class="fede">
+      <p class="side-title">Perfil del cliente · Fede</p>
+      <div class="profile panel">
+        <div class="block">
+          <h2>Trabajos (jobs)</h2>
+          <ul>
+            <li>Decidir cada día si entrenar fuerte, suave o descansar, según el reloj y el cuerpo.</li>
+            <li>Interpretar sus datos (sueño, HRV, estrés, ritmo) y convertirlos en acción.</li>
+            <li>Sostener el objetivo (carrera / marca) sin lesionarse ni sobreentrenar.</li>
+            <li><i>Emocional:</i> sentir control y confianza en que lo está haciendo bien.</li>
+            <li><i>Social:</i> mostrarse como alguien que entrena en serio.</li>
+          </ul>
+        </div>
+        <div class="block">
+          <h2>Frustraciones (pains)</h2>
+          <ul>
+            <li><b>Tiene los datos pero no sabe accionarlos</b>: el dato queda sin traducir.</li>
+            <li>Fricción de integrar: debe cruzar a mano o subir capturas a un chat.</li>
+            <li>Ninguna app le arma el plan; solo muestra números sueltos.</li>
+            <li>La nutrición está desconectada de sus datos.</li>
+            <li>Fatiga de sumar otra pantalla / otra IA; miedo a estancarse.</li>
+          </ul>
+        </div>
+        <div class="block">
+          <h2>Alegrías (gains)</h2>
+          <ul>
+            <li>Que el dato se vuelva decisión: "hoy entrená así porque dormiste esto".</li>
+            <li>Un plan que se ajuste <b>automáticamente</b> a la biometría, sin interpretar él nada.</li>
+            <li>Una capa de <b>interpretación real</b>, no otro dashboard.</li>
+            <li>Todo en un solo lugar; progreso visible y sostenido sin lesiones.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="fitnote">
+    <b>Fit (encaje) para Fede.</b> El pain dominante, datos sin accionar y fricción de integrarlos, encuentra su aliviador en la conversión automática de la biometría en una recomendación diaria; el gain de "que el dato se vuelva decisión" se cumple con la interpretación en lenguaje natural y el plan que se reajusta solo. Scala no le suma otra pantalla: le da la capa de interpretación que el reloj no tiene.
+  </div>
+
+  <div class="footnote">Fuente: perfil del cliente validado en el Módulo 3 (15 entrevistas + encuesta n=60); mapa de valor diseñado sobre las features en producción de Scala. Framework: Value Proposition Canvas (Osterwalder et al., Value Proposition Design).</div>
+</div>
+
+<!-- ================= FRENTE 2 · FLOR (sin wearable) ================= -->
+<div class="sheet" id="flor">
+  <div class="eyebrow">Scala · NBL Módulo 4 · Propuesta de Valor</div>
+  <h1>Value Proposition Canvas · Frente B · Atleta SIN wearable (Flor)</h1>
+  <div class="subtitle">El frente mayoritario y menos disputado (≈65% del segmento). El mapa de valor de Scala para este frente prescinde del dispositivo: el input llega por la conversación y el valor está en dar estructura sin reemplazar el vínculo humano.</div>
+  <span class="frente-tag tag-teal">Frente B · ~65% del segmento · sin dispositivo, delega la estructura</span>
+
+  <div class="canvas">
+    <!-- VALUE MAP -->
+    <div>
+      <p class="side-title">Mapa de valor · Scala</p>
+      <div class="valuemap panel">
+        <div class="block">
+          <h2>Productos y servicios</h2>
+          <ul>
+            <li>Coach de IA conversacional que <b>funciona sin wearable</b> (input por chat / voz).</li>
+            <li>Onboarding conversacional adaptativo (o formulario).</li>
+            <li>Planes de entrenamiento y nutrición <b>generados por conversación</b>.</li>
+            <li>Check-in diario conversacional.</li>
+            <li>Nutrición con foto AI + <b>planificación semanal y lista de compras</b>.</li>
+            <li>Seguimiento de <b>ciclo menstrual</b> (variante mujer atleta); memoria del coach.</li>
+          </ul>
+        </div>
+        <div class="block">
+          <h2>Aliviadores de dolor</h2>
+          <ul>
+            <li>Le <b>arma la estructura</b> sin que ella la haga (plan generado y ajustable).</li>
+            <li>Check-in diario <b>simple, sin wearable</b>: el input llega por la conversación.</li>
+            <li>Nutrición <b>simple</b>, con alimentos accesibles y sin tecnicismos.</li>
+            <li>Tono no culpabilizador + señales de rigor → <b>confianza</b>.</li>
+            <li>Se posiciona como <b>capa que organiza</b>, no reemplaza a su entrenadora / clase.</li>
+          </ul>
+        </div>
+        <div class="block">
+          <h2>Creadores de alegría</h2>
+          <ul>
+            <li><b>"Qué hacer hoy"</b> en una sola frase, simple.</li>
+            <li>Se adapta día a día por conversación, a su contexto real.</li>
+            <li>Recordatorios, planificación de comidas y lista de compras.</li>
+            <li>Progreso visible <b>sin datos de dispositivo</b> (fotos, check-ins, sensaciones).</li>
+            <li><b>Complementa</b>, no reemplaza, el vínculo humano y la comunidad.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- FIT -->
+    <div class="fitcol">
+      <div class="arrow">→</div>
+      <div class="fitlabel">Fit</div>
+    </div>
+
+    <!-- CUSTOMER PROFILE -->
+    <div class="flor">
+      <p class="side-title">Perfil del cliente · Flor</p>
+      <div class="profile panel">
+        <div class="block">
+          <h2>Trabajos (jobs)</h2>
+          <ul>
+            <li>Entrenar sin tener que armar el plan ella misma.</li>
+            <li>Comer "bien" sin perderse en la info contradictoria de las redes.</li>
+            <li>Sostener la constancia sin una estructura propia.</li>
+            <li>Saber si está progresando, sin datos de dispositivo.</li>
+            <li><i>Emocional:</i> sentir que lo hace bien, bajar la autoexigencia y la duda.</li>
+            <li><i>Social:</i> mantener el vínculo y la comunidad de su clase / entrenadora.</li>
+          </ul>
+        </div>
+        <div class="block">
+          <h2>Frustraciones (pains)</h2>
+          <ul>
+            <li><b>No tiene guía propia</b>, solo la de la clase puntual.</li>
+            <li>Duda seguido si progresa, sin referencia objetiva.</li>
+            <li>La <b>nutrición es su punto más débil</b> (qué comer, planificar el súper).</li>
+            <li>Desconfía de apps genéricas que no entienden su contexto ni se sienten profesionales.</li>
+            <li>Abandona si le suman fricción o pierde el vínculo humano.</li>
+          </ul>
+        </div>
+        <div class="block">
+          <h2>Alegrías (gains)</h2>
+          <ul>
+            <li>Que le <b>digan qué hacer hoy</b>, simple y sin tecnicismos.</li>
+            <li>Mantener el vínculo humano y social que ya valora.</li>
+            <li>Nutrición accesible, con alimentos ricos y reales.</li>
+            <li>Progreso visible sin depender de un dispositivo; algo que la sostenga entre sesiones.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="fitnote">
+    <b>Fit (encaje) para Flor.</b> El pain de fondo, la ausencia de estructura y una nutrición sin norte, se alivia con el plan generado por conversación y la nutrición simple con lista de compras; el gain de "que le digan qué hacer hoy sin perder el vínculo humano" se cumple posicionando a Scala como capa de organización que complementa, no reemplaza, a su entrenadora. El wearable opcional es lo que hace posible atender a este frente, el más grande y menos disputado.
+  </div>
+
+  <div class="footnote">Fuente: perfil del cliente validado en el Módulo 3 (15 entrevistas + encuesta n=60); mapa de valor diseñado sobre las features en producción de Scala. Framework: Value Proposition Canvas (Osterwalder et al., Value Proposition Design).</div>
+</div>
+
+</body>
+</html>
