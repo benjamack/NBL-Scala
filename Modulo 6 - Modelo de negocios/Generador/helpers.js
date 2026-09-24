@@ -16,24 +16,25 @@ const bodyP = (text, opts = {}) => new Paragraph({
 });
 
 // Partes en **negrita** y _itálica_ dentro del cuerpo.
-function runs(text, size = 24) {
+function runs(text, size = 24, bold = false) {
   const out = [];
   const re = /(\*\*[^*]+\*\*|_[^_]+_)/g;
   let last = 0, m;
   while ((m = re.exec(text)) !== null) {
-    if (m.index > last) out.push(new TextRun({ text: text.slice(last, m.index), font: FONT, size, color: BLACK }));
+    if (m.index > last) out.push(new TextRun({ text: text.slice(last, m.index), font: FONT, size, bold, color: BLACK }));
     const tok = m[0];
     if (tok.startsWith('**')) out.push(new TextRun({ text: tok.slice(2, -2), font: FONT, size, bold: true, color: BLACK }));
-    else out.push(new TextRun({ text: tok.slice(1, -1), font: FONT, size, italics: true, color: BLACK }));
+    else out.push(new TextRun({ text: tok.slice(1, -1), font: FONT, size, bold, italics: true, color: BLACK }));
     last = re.lastIndex;
   }
-  if (last < text.length) out.push(new TextRun({ text: text.slice(last), font: FONT, size, color: BLACK }));
+  if (last < text.length) out.push(new TextRun({ text: text.slice(last), font: FONT, size, bold, color: BLACK }));
   return out;
 }
 
 // Título de sección: Arial 16 bold, en página nueva.
-const tituloSeccion = (text, { salto = true } = {}) => new Paragraph({
-  spacing: { before: 0, after: 240, line: 360 },
+const SALTOS = process.env.SALTOS_DE_SECCION === '1';
+const tituloSeccion = (text, { salto = SALTOS } = {}) => new Paragraph({
+  spacing: { before: salto ? 0 : 400, after: 240, line: 360 },
   keepNext: true,
   children: [
     ...(salto ? [new PageBreak()] : []),
@@ -99,8 +100,7 @@ function celda(lineas, { head = false, colSpan, rowSpan, size = 20, align = Alig
     children: arr.map((l) => new Paragraph({
       spacing: { after: 40, line: 240 },
       alignment: align,
-      children: l === '' ? [new TextRun({ text: '' })]
-        : runs(l, size).map((r) => (head ? new TextRun({ ...r.options, bold: true }) : r)),
+      children: l === '' ? [new TextRun({ text: '' })] : runs(l, size, head),
     })),
   });
 }
