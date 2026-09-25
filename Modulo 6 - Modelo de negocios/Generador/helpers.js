@@ -32,7 +32,7 @@ function runs(text, size = 24, bold = false) {
 }
 
 // Título de sección: Arial 16 bold, en página nueva.
-const SALTOS = process.env.SALTOS_DE_SECCION === '1';
+const SALTOS = process.env.SALTOS_DE_SECCION !== '0';
 const tituloSeccion = (text, { salto = SALTOS } = {}) => new Paragraph({
   spacing: { before: salto ? 0 : 400, after: 240, line: 360 },
   keepNext: true,

@@ -45,7 +45,10 @@ for m in re.finditer(r'(<w:tbl>.*?</w:tbl>)|(<w:p\b[^>]*>.*?</w:p>)', CUERPO, re
             celdas = [celda_html(tc) for tc in re.findall(r'<w:tc>.*?</w:tc>', tr, re.S)
                       if 'w:vMerge w:val="continue"' not in tc]
             filas.append('<tr>' + ''.join(celdas) + '</tr>')
-        partes.append('<table>' + ''.join(filas) + '</table>')
+        # tamaño de letra de la tabla según el docx (el canvas va más chico)
+        tsz = re.search(r'<w:sz w:val="(\d+)"', m.group(1))
+        estilo = f' style="font-size: {int(tsz.group(1)) / 2:g}pt"' if tsz else ''
+        partes.append(f'<table{estilo}>' + ''.join(filas) + '</table>')
         continue
     p = m.group(2)
     txt = runs_html(p)

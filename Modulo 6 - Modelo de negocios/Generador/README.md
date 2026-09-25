@@ -25,13 +25,13 @@ python3 a-html.py "../Entrega/Doc - Modulo 6 - El Modelo de Negocios (v2) - Scal
 
 ## Dos cosas para no romper
 
-**Los saltos de página por sección están apagados.** El Anexo E los exige para el
-TFG y los declara opcionales para documentos cortos. Con saltos el documento da
-**21 páginas** y sin ellos **16**, que es el tope del rango de 12 a 16 que fija
-`Framework y Plan/01`. Para volver a encenderlos:
+**Cada sección empieza en página nueva**, igual que en la v1: la carátula, el
+resumen y cada sección van en su propia página. Así el documento da **18 páginas**.
+La consigna del módulo no fija un límite; el rango de 12 a 16 era un objetivo
+propio de `Framework y Plan/01`. Para generarlo sin saltos:
 
 ```bash
-SALTOS_DE_SECCION=1 node build.js "../Entrega/..."
+SALTOS_DE_SECCION=0 node build.js "../Entrega/..."
 ```
 
 **El texto se edita acá, no en el `.docx`.** Si se abre el Word y se escribe

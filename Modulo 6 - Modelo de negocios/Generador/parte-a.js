@@ -39,19 +39,19 @@ const seccion2 = [
 
   tabla([
     fila([
-      c(['**Aliados clave**', '', '· Proveedor de modelos de inteligencia artificial', '· Apple (App Store y Salud)', '· (A) Wearables', '· Atletas de referencia', '· Entrenadores con cartera', '· Profesionales del deporte', '· Marcas de nutrición'], { head: false, rowSpan: 2, size: 18 }),
-      c(['**Actividades clave**', '', '· Desarrollo del coach', '· Control de calidad y seguridad', '· Contenido y comunidad', '· Alta y soporte de entrenadores', '· (A) Integraciones con el reloj'], { rowSpan: 1, size: 18 }),
-      c(['**Propuesta de valor**', '', '· Coach de inteligencia artificial con el que se habla', '· Objetivo con fases y fecha', '· Entrenamiento, nutrición y hábitos juntos', '· (A) Biometría interpretada y plan al reloj', '· (B) Estructura sin dispositivo', '· Sensible al ciclo menstrual', '· US$10 contra US$100 a 400 de un coach humano', '· Al entrenador: más atletas, mismo tiempo'], { rowSpan: 2, size: 18 }),
-      c(['**Relación con clientes**', '', '· Atraer: video con atletas de referencia', '· Convertir: landing con precio', '· Cerrar: prueba gratuita y activación', '· Deleitar: coach diario con memoria', '· Retener: el entrenador como vínculo', '· Viral: referidos y clubes'], { size: 18 }),
-      c(['**Segmentos de clientes**', '', '· (A) Con wearable, ~35%', '· (B) Sin wearable, ~65%', '· Transversal: la mujer atleta', '· Argentina primero', '· Un beneficiario, dos pagadores'], { rowSpan: 2, size: 18 }),
+      c(['**Aliados clave**', '', '· Proveedor de modelos de inteligencia artificial', '· Apple (App Store y Salud)', '· (A) Wearables', '· Atletas de referencia', '· Entrenadores con cartera', '· Profesionales del deporte', '· Marcas de nutrición'], { head: false, rowSpan: 2, size: 16 }),
+      c(['**Actividades clave**', '', '· Desarrollo del coach', '· Control de calidad y seguridad', '· Contenido y comunidad', '· Alta y soporte de entrenadores', '· (A) Integraciones con el reloj'], { rowSpan: 1, size: 16 }),
+      c(['**Propuesta de valor**', '', '· Coach de inteligencia artificial con el que se habla', '· Objetivo con fases y fecha', '· Entrenamiento, nutrición y hábitos juntos', '· (A) Biometría interpretada y plan al reloj', '· (B) Estructura sin dispositivo', '· Sensible al ciclo menstrual', '· US$10 contra US$100 a 400 de un coach humano', '· Al entrenador: más atletas, mismo tiempo'], { rowSpan: 2, size: 16 }),
+      c(['**Relación con clientes**', '', '· Atraer: video con atletas de referencia', '· Convertir: landing con precio', '· Cerrar: prueba gratuita y activación', '· Deleitar: coach diario con memoria', '· Retener: el entrenador como vínculo', '· Viral: referidos y clubes'], { size: 16 }),
+      c(['**Segmentos de clientes**', '', '· (A) Con wearable, ~35%', '· (B) Sin wearable, ~65%', '· Transversal: la mujer atleta', '· Argentina primero', '· Un beneficiario, dos pagadores'], { rowSpan: 2, size: 16 }),
     ]),
     fila([
-      c(['**Recursos clave**', '', '· El coach como know-how propio', '· Marca: @scala.fit y 111 inscriptos', '· Equipo fundador', '· Acceso a los modelos', '· Historial de uso de cada atleta', '· La red de entrenadores'], { size: 18 }),
-      c(['**Canales**', '', '· Instagram y TikTok', '· Landing scala.fit', '· App Store: cobro al atleta directo', '· Cobro por web al entrenador', '· El entrenador como puerta en bloque', '· El coach como posventa'], { size: 18 }),
+      c(['**Recursos clave**', '', '· El coach como know-how propio', '· Marca: @scala.fit y 111 inscriptos', '· Equipo fundador', '· Acceso a los modelos', '· Historial de uso de cada atleta', '· La red de entrenadores'], { size: 16 }),
+      c(['**Canales**', '', '· Instagram y TikTok', '· Landing scala.fit', '· App Store: cobro al atleta directo', '· Cobro por web al entrenador', '· El entrenador como puerta en bloque', '· El coach como posventa'], { size: 16 }),
     ]),
     fila([
-      c(['**Estructura de costos**', '', '· Inferencia de inteligencia artificial: el costo variable clave', '· Comisión de la App Store (15%), sólo cobro directo', '· Procesamiento por web en el cobro al entrenador', '· Equipo y contenido: los fijos principales', '· Infraestructura'], { colSpan: 2, size: 18 }),
-      c(['**Fuentes de ingresos**', '', '· Suscripción mensual por atleta, modelo único', '· US$10 si paga el atleta, US$9 si paga su entrenador', '· Opción anual de US$96 en el cobro directo', '· Prueba gratuita de catorce días', '· Margen bruto del 62% al 71% según el pagador'], { colSpan: 3, size: 18 }),
+      c(['**Estructura de costos**', '', '· Inferencia de inteligencia artificial: el costo variable clave', '· Comisión de la App Store (15%), sólo cobro directo', '· Procesamiento por web en el cobro al entrenador', '· Equipo y contenido: los fijos principales', '· Infraestructura'], { colSpan: 2, size: 16 }),
+      c(['**Fuentes de ingresos**', '', '· Suscripción mensual por atleta, modelo único', '· US$10 si paga el atleta, US$9 si paga su entrenador', '· Opción anual de US$96 en el cobro directo', '· Prueba gratuita de catorce días', '· Margen bruto del 62% al 71% según el pagador'], { colSpan: 3, size: 16 }),
     ]),
   ]),
   epigrafe('Tabla 1. Business Model Canvas de Scala, versión 2, septiembre de 2026.'),
