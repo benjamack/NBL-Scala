@@ -20,7 +20,7 @@ python3 a-html.py "../Entrega/Doc - Modulo 6 - El Modelo de Negocios (v2) - Scal
 | `parte-a.js` | Carátula, Resumen, §1 y §2 (con la Tabla 1, el canvas). |
 | `parte-b.js` | §3 completa: máquina de ventas, canales, modelo de ingresos y evidencia. |
 | `parte-c.js` | §4 cadena de valor, §5 aliados (Tabla 3) y §6 números (Tabla 4). |
-| `parte-d.js` | §7 indicadores, §8 conclusión y el anexo de declaración de IA. |
+| `parte-d.js` | §7 conclusión y el anexo de declaración de IA. |
 | `a-html.py` | Convierte el `.docx` a HTML con el mismo formato, para imprimirlo a PDF en A4. |
 
 ## Dos cosas para no romper
